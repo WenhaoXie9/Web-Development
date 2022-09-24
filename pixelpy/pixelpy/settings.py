@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     "corsheaders",
     "djoser",
+    "projectView.apps.ProjectviewConfig"
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -83,10 +84,16 @@ WSGI_APPLICATION = "pixelpy.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+import pymysql
+pymysql.install_as_MYSQLdb()
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.mysql",
+        "NAME":  "projectmange",
+        "USER": "root",
+        "PASSWORD":"Xxwwhh@529",
+        "HOST":"localhost",
+        "PORT":"3306"
     }
 }
 
