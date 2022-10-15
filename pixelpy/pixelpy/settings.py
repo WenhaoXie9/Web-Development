@@ -42,12 +42,11 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     "corsheaders",
     "djoser",
-    "projectView.apps.ProjectviewConfig"
+    "projectView.apps.ProjectviewConfig",
+    "projectView",
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080",
-]
+CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",

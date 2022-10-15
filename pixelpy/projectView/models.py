@@ -3,8 +3,8 @@ from django.db import models
 
 # Create your models here.
 class Project(models.Model):
-    indexId = models.AutoField(primary_key=True)
-    #Sim_ID = models.AutoField(primary_key = True)
+    #indexId = models.AutoField(primary_key=True)
+    Sim_ID = models.AutoField(primary_key = True)
     Pixel_name = models.CharField(max_length=32)
     Size = models.CharField(max_length=32)
     True_w_h = models.CharField(max_length=32)
